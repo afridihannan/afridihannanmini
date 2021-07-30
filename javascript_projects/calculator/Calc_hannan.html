@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+    }
+
+    .main_div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .centre_div {
+        border: 3px solid black;
+        width: 30%;
+        height: 70%;
+        margin: auto auto;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .top_div {
+        height: 13%;
+        width: 90%;
+        border: 1px solid gray;
+        margin: auto auto;
+        background-color: cornsilk;
+        text-align: right;
+    }
+
+    .cont_div {
+        height: 75%;
+        width: 90%;
+        /* border: 3px solid green; */
+        margin: auto auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opa_div {
+        height: 13%;
+        width: 100%;
+        /* border: 3px solid red; */
+        margin: auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .operator {
+        width: 23%;
+        border: 1px solid rgb(109, 106, 106);
+        background-color: rgba(109, 106, 106, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .operator:hover {
+        transform: scale(1.04);
+    }
+
+    .num_div {
+        margin-top: 10px;
+        /* border: 3px solid pink; */
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .num {
+        width: 75%;
+        /* border: 3px solid yellow; */
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .equal {
+        width: 25%;
+        /* border: 3px solid yellow; */
+    }
+
+    .number {
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        background-color: rgb(224, 220, 220);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .number:hover {
+        transform: scale(1.02);
+    }
+
+    .equal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        cursor: pointer;
+    }
+
+    .equal:hover {
+        transform: scale(1.02);
+    }
+</style>
+
+<body>
+    <div class="main_div">
+        <div class="centre_div">
+            <div class="top_div" id="display"></div>
+            <div class="cont_div">
+                <div class="opa_div">
+                    <div class="operator" id="oper1" onclick="submit(id)">+</div>
+                    <div class="operator" id="oper2" onclick="submit(id)">-</div>
+                    <div class="operator" id="oper3" onclick="submit(id)">x</div>
+                    <div class="operator" id="oper4" onclick="submit(id)">/</div>
+                </div>
+                <div class="num_div">
+                    <div class="num">
+                        <div class="number" id="s7" onclick="submit(id)">7</div>
+                        <div class="number" id="s8" onclick="submit(id)">8</div>
+                        <div class="number" id="s9" onclick="submit(id)">9</div>
+                        <div class="number" id="s4" onclick="submit(id)">4</div>
+                        <div class="number" id="s5" onclick="submit(id)">5</div>
+                        <div class="number" id="s6" onclick="submit(id)">6</div>
+                        <div class="number" id="s1" onclick="submit(id)">1</div>
+                        <div class="number" id="s2" onclick="submit(id)">2</div>
+                        <div class="number" id="s3" onclick="submit(id)">3</div>
+                        <div class="number" id="s0" onclick="submit(id)">0</div>
+                        <div class="number" id="s" onclick="submit(id)">.</div>
+                        <div class="number" onclick="cleared()">c</div>
+                    </div>
+                    <div class="equal" id="equal" onclick="submit(id)">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <noscript>You need to Enable Javacript to run this file</noscript>
+    <script>
+        console.log("Hello Calculator");
+
+        var num1 = "",
+            n1,
+            n2,
+            op = "";
+        var a, dis;
+        let display = document.getElementById("display");
+        function submit(id) {
+            // let display=document.getElementById("display");
+            let key = document.getElementById(id);
+            a = key.innerHTML;
+            if ((a >= "0" && a <= "9") || a === ".") {
+                num1 += a;
+                display.innerHTML = num1;
+            } else if (a == "+" || a == "-" || a == "x" || a == "/") {
+                op = a;
+                if (num1.includes(".")) {
+                    n1 = parseFloat(num1);
+                    num1 = "";
+                } else {
+                    n1 = parseInt(num1);
+                    num1 = "";
+                }
+            } else if (a == "=") {
+                if (!num1.includes(".")) {
+                    n2 = parseInt(num1);
+                } else {
+                    n2 = parseFloat(num1);
+                }
+                display.innerHTML = calculate(n1, op, n2);
+            }
+        }
+        function cleared() {
+            num1 = "";
+            display.innerHTML = "";
+        }
+        
+        function calculate(n1, op, n2) {
+            if (op == "+") {
+                return n1 + n2;
+            } else if (op == "-") {
+                return n1 - n2;
+            } else if (op == "x") {
+                return n1 * n2;
+            } else {
+                if (n2 == 0) {
+                    return null;
+                } else {
+                    return n1 / n2;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

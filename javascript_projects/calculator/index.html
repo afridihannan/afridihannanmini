@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="centre_div">
+            <div class="top_div" id="display"></div>
+            <div class="cont_div">
+                <div class="opa_div">
+                    <div class="operator" id="oper1" onclick="submit(id)">+</div>
+                    <div class="operator" id="oper2" onclick="submit(id)">-</div>
+                    <div class="operator" id="oper3" onclick="submit(id)">x</div>
+                    <div class="operator" id="oper4" onclick="submit(id)">/</div>
+                </div>
+                <div class="num_div">
+                    <div class="num">
+                        <div class="number" id="s7" onclick="submit(id)">7</div>
+                        <div class="number" id="s8" onclick="submit(id)">8</div>
+                        <div class="number" id="s9" onclick="submit(id)">9</div>
+                        <div class="number" id="s4" onclick="submit(id)">4</div>
+                        <div class="number" id="s5" onclick="submit(id)">5</div>
+                        <div class="number" id="s6" onclick="submit(id)">6</div>
+                        <div class="number" id="s1" onclick="submit(id)">1</div>
+                        <div class="number" id="s2" onclick="submit(id)">2</div>
+                        <div class="number" id="s3" onclick="submit(id)">3</div>
+                        <div class="number" id="s0" onclick="submit(id)">0</div>
+                        <div class="number" id="s" onclick="submit(id)">.</div>
+                        <div class="number" onclick="cleared()">c</div>
+                    </div>
+                    <div class="equal" id="equal" onclick="submit(id)">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
