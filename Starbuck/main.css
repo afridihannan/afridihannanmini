@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+.main-container{
+   width: 90%;
+   margin: 00 auto;
+   z-index: -1;
+   position: relative;
+}
+
+.announcements{
+    background-color: #d8e8e3;
+    height: 101px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.announcements span{
+      max-width: 60%;
+      text-align: center;
+      font-size: 19px;
+      line-height: 1.75;
+      font-weight: 500;
+}
+.announcements span a{
+    color: black;
+}
+.left-right-section{
+    display: flex;
+    
+}
+.left-right-section div{
+    width: 50%;
+}
+.left-right-section .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f8f6;
+    color: #1e3932;
+    padding: 32px 48px;
+}
+.left-right-section img{
+    width: 100%;
+    /* height: 420px; */
+    display: flex;
+}
+.left-right-section h1, .left-right-section h3{
+    font-weight: 400;
+    margin: 32px;
+}
+.text .cta{
+    padding: 7px 16px;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: seagreen;
+    font-weight: 600;
+    cursor: pointer;
+}
+.text .cta:hover{
+    background-color: rgba(0,0,0,.06);
+}
+.chill .text{
+    background-color: #f2f0eb;
+}
+.chill h3{
+    text-align: center;
+    line-height: 1.5;
+}
+.top-bottom{
+    display: flex;
+}
+.top-bottom-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    background-color: #dfe9e6;
+    color: #1e3932;
+    height: 590px;
+
+}
+.top-bottom-section h1,.top-bottom-section h3{
+    font-weight: 400;
+    margin: 32px;
+}
+/* .section-container{
+    height: 420px;
+} */
+.section-container image{
+    justify-content: center;
+    align-items: center;
+}
+.section-container .text{
+    text-align: center;
+    height: 200px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.section-container .text h1{
+    margin-top: 24px;
+}
+.top-bottom-section .image{
+    width: 100%;
+}
+.top-bottom-section .image img{
+    width: 100%;
+}
+.cta-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

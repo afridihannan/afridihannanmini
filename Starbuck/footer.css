@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+.footer{
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+.footer ul{
+    list-style-type: none;
+    margin: 00;
+    padding: 00;
+}
+.footer h3{
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer ul li{
+    margin: 17px;
+    font-weight:lighter;
+    font-size: 15px;
+    margin-left: 00;
+}
+.footer div{
+    margin: 20px;
+}
+.footer div:first-child{
+    margin-left: 40px;
+    
+}
