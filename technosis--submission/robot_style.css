@@ -1,0 +1,27 @@
+.bar{
+    font-family: cursive;
+    background-color: rgba(243, 9, 9);
+    border-radius: 13px;
+}
+.bar li{
+    float: left;
+    list-style: none;
+    padding: 3px 3px;
+    margin: 13px 20px;
+}
+.bar ul{
+    overflow: auto;
+}
+a:hover{
+    background-color: white;
+    border:3px solid black;
+    border-radius: 7px;
+    
+}
+.bar li a:hover{
+    color: black;
+}
+.bar li a{
+    color: white;
+    text-decoration: none;
+}

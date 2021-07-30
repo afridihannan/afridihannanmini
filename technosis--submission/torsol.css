@@ -1,0 +1,13 @@
+.torsol{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 0 0 50px 50px;
+    margin-left:0 auto;
+    margin-bottom: 10px;
+    
+}
+.torsol:hover{
+    background-color: pink;
+    border: 3px solid black;
+}

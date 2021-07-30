@@ -1,0 +1,23 @@
+.leftarm{
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.leftarm:hover{
+    background-color: pink;
+    -webkit-transform: rotate(30deg);
+   
+    border: 3px solid black;
+}
+.rightarm{
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+.rightarm:hover{
+    background-color: pink;
+    -webkit-transform: rotate(150deg);
+    border: 3px solid black;
+}

@@ -1,0 +1,23 @@
+.leftleg,.rightleg{
+    width: 400px;
+    height: 120px;
+    border-radius:  100px;
+}
+.leftleg{
+ margin-left: 45px;
+}
+.rightleg{
+ margin-right: 45px;
+}
+.leftleg:hover{
+ -webkit-transform: rotate(20deg);
+
+ background-color: pink;
+     border: 4px solid black;
+}
+.rightleg:hover{
+ -webkit-transform: rotate(160deg);
+
+ background-color: pink;
+ border: 4px solid black;
+}

@@ -1,0 +1,15 @@
+.head{
+    width: 200px;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 10px;
+    background-color:rgb(128, 250, 7);
+ 
+}
+.head:hover{
+    width: 300px;
+    transition: 1s ease-in-out;
+    background-color: violet;
+    border: 3px solid black;
+}

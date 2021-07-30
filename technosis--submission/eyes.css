@@ -1,0 +1,30 @@
+.lefteye{
+    position:absolute;
+    top:0;
+    left:0;
+    right:30px;
+    bottom:5px;
+    margin:auto;
+    background: repeating-linear-gradient(rgb(21, 51, 150) 70%,#002966 80%, blue) ;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+}
+.righteye{
+    position:absolute;
+    top:0;
+    left:30px;
+    right:0;
+    bottom:5px;
+    margin:auto;
+    background: repeating-linear-gradient(rgb(21, 51, 150) 70%,#002966 80%, blue) ;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+}
