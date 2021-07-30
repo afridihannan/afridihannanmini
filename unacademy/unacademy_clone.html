@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Unacademy Clone</title>
+</head>
+<style>
+    .heading{
+        padding-left:50px;
+        padding-top: 30px;
+    }
+    .heading1 h2{
+        font-size: 45px;
+        padding: 35px;
+        }
+    .heading1{
+        height: 280px;
+    }
+    .container h5{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container ul{
+        padding-inline-start: 00px;
+       
+    }
+    .container ul li{
+        text-decoration: none;
+        display: inline;
+        padding:7px;
+        font-size: 15px;
+        color: rgba(79, 211, 145, 0.877);
+    }
+    #box1{
+        width: 45%;
+        margin-left: 50px;
+        background-image: url('https://static.uacdn.net/production/_next/static/images/home/test-prep-learning.svg');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    #box2{
+        width: 45%;
+        height: 300px;
+        background-image: url('https://static.uacdn.net/production/_next/static/images/home/k12-learning.svg');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .btn{
+        font-size: 20px;
+        padding: 15px;
+        background-color: rgba(79, 211, 145);
+        border: 1px solid white;
+        border-radius: 9px;
+        font-weight: 15px;
+        color: white;
+        text-decoration: none;
+    }
+    .btn:hover{
+        color:rgba(79, 211, 145);
+       background-color: wheat;
+    }
+    .container2{
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .box3{
+        
+        width: 27%;
+        height: 350px;
+        font-size: 15px;
+    }
+    #box31{
+        margin-left: 5%;
+    }
+    #box33{
+        margin-right: 5%;
+    }
+    .container4{
+        height: 350px;
+        display: flex;
+      }
+    .box4{
+        width: 45%;
+    }
+    #box41 h2{
+        font-size: 35px;
+        margin-top: 50px;
+        text-align: right;
+        margin-right: 30px;
+        font-weight: bolder;
+    }
+    #box41 p{
+        margin-left: 60%;
+        font-weight: lighter;
+    }
+    .box4 div{
+        display: flex;
+        float: right;
+    }
+    .box4 div img{
+        padding:12px;
+    }
+    #img42 img{
+        float: left;
+        padding-left: 90px;
+    }
+    .container5{
+        height:540px;
+        display: flex;
+    }
+    .box5{
+        
+        width: 50%;
+        }
+    #box51 h2{
+        padding-top: 15%;
+        font-size: 40px;
+        padding-left: 30%;
+        font-weight: bolder;
+    }
+    #box51 p{
+        font-weight: lighter;
+        padding-left: 30%;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    #box51 a{
+             margin: 30%;
+    }
+
+    .s_sbox51{
+        height: 180px;
+        margin-right:none;
+     }
+    .s_sbox51{
+        font-size: 20px;
+        margin-right: 00px;
+        }
+     .s_sbox52{
+        font-size: 20px;
+        margin-right: 00px;
+        }
+     .green{
+        margin: 00px;
+        padding: 00px;
+        color: rgba(79, 211, 145, 0.877);
+        font-size: 35px;
+        
+    }
+     .s_sbox51 h3{
+        margin: 00px;
+        padding: 00px;
+        overflow: auto;
+        display: inline-block;
+        font-size: 35px;
+      }
+      .s_sbox52 h3{
+        margin: 00px;
+        padding: 00px;
+        overflow: auto;
+        display: inline-block;
+        font-size: 35px;
+      }
+    #s_sbox5211{
+        background-image:url("https://static.uacdn.net/web-cms/highlightgoals_96d24a04e7_a8e8de225d.svg");
+        background-repeat:no-repeat;
+    }
+    #s_sbox5212{
+        background-image: url('https://static.uacdn.net/web-cms/highlightlive_b05ed1f073_a8042bd7a8.svg');
+        background-repeat:no-repeat;
+    }
+    #s_sbox5213{
+        background-image: url('https://static.uacdn.net/web-cms/highlightminswatched_fe52bc4026_ca82eba8b0.svg');
+        background-repeat:no-repeat;
+    }
+    #box52{
+        display: flex;
+        width: 50%;
+    }
+    .sbox5{
+        width: 50%;
+        margin: 00px;
+    }
+    #sbox522{
+        height: 100%;
+    }
+    .s_sbox52{
+        height: 33.33%;
+        
+    }
+    #s_sbox5221{
+        margin-top: 30%;
+        background-image: url('https://static.uacdn.net/web-cms/hightlighteducators_c894789a76_58c2a07e52.svg');
+        background-repeat: no-repeat;
+    }
+    #s_sbox5222{
+        background-image: url('https://static.uacdn.net/web-cms/highlightfreecourses_bb697dbd44_47fe832f07.svg');
+        background-repeat: no-repeat;
+        margin-top: 10%;
+    }
+    .last-con{
+        /* border: 3px solid brown; */
+        height: 250px;
+        display: flex;
+    }
+    #last-box1{
+        width: 15%;
+        margin-left: 7%;
+    }
+    #last-box2{
+        width: 15%;
+        margin-left: 5%;
+        
+    }
+    #last-box2 ul{
+        padding-inline-start: 0px;
+        margin: 0%;
+    }
+    #last-box3{
+        width: 15%;
+        
+    }
+    #last-box4{
+        width: 15%;
+        
+    }
+    #last-box5{
+        width: 20%;
+        margin-right: 7%;
+    }
+    .lists{
+        padding-top: 10px;
+        list-style: none;
+        font-weight: lighter;
+        font-size: 15px;
+    }
+    .list-h{
+        padding: 15px;
+        list-style: none;
+        font-size: 17px;
+    }
+    #login{
+        float: right;
+        margin-right: 30px;
+        height: 20px;
+        text-align: center;
+    }
+    @media screen and (max-width:640px) {
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+        #box1,#box2{
+            margin-left:00;
+        }
+    }
+</style>
+<body>
+    <div class="heading">
+        <img src="https://static.uacdn.net/production/_next/static/images/logo.svg" alt="Unacademy logo" width="161px" height="24px">
+        <a href="#" class="btn" id="login">Login</a>
+    </div>
+    <div class="heading1">
+        <h2>India's largest <br> learning platform
+        </h2>
+    </div>
+    <div class="container">
+        <div id="box1">
+            <h5>Prepare for <br><b>competitive exams</b></h5>
+            <p>Popular goals</p>
+            <ul>
+            <li>UPSE CSE-GS</li>
+            <li>IIT JEE</li>
+            <li>NEET UG</li>
+            <li>SSC EXAMS</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <a href="#" class="btn">Start learning</a>
+        </div>
+        <div id="box2">
+            <h5>Prepare for <br> <b>class 6 to 12</b></h5>
+            <p>Choose a goal</p>
+            <ul>
+                <li>class 6</li>
+                <li>class 7</li>
+                <li>class 8</li>
+                <li>class 9</li>
+                <li>class 10</li>
+            </ul>
+            <ul>
+                <li>class 11</li>
+                <li>class 12</li>
+            </ul>
+            <br>
+           <a href="#" class="btn">Start learning</a>
+        </div>
+    </div>
+    <br><br><br><br>
+     <div class="container2">
+         <div class="box3" id="box31">
+             <img src="https://static.uacdn.net/web-cms/dailyliveclasses_0c0023950f_c187155ee3.svg" alt="Image" width="368"height="276">
+             <h3>Daily live classes</h3>
+             <p>Chat with educators,ask questions, answer<br>live polls
+            and get yours doubts cleared-all<br>while the class is going on</p>
+         </div>
+         <div class="box3" id="box32">
+            <img src="https://static.uacdn.net/web-cms/syllabus_a9da21d824_b20b285483.svg" alt="Image" width="368"height="276">
+            <h3>Practice and revise</h3>
+            <p>Learning isn't just limited to classes with our<br>with our
+            practice session, mock tests and lecture notes<br>shared with PDFs
+            for your revision </p>
+         </div>
+         <div class="box3" id="box33">
+            <img src="https://static.uacdn.net/web-cms/learnanytimeanywhere_cb19d5de30_b92bc0c6a1.svg" alt="Image"width="368"height="276">
+            <h3>Learn anytime,anywhere</h3>
+            <p>One subscription gets you access to all our<br>live and recorded classes
+                to watch from the<br> comfort of any of your devices
+            </p>
+         </div>
+     </div>
+     <br><br><br><br>
+     <div class="container4">
+         <div class="box4" id="box41">
+            <h2>Get the learning<br>app</h2>
+            <p>Download lessons and learn anytime<br>
+            anywhere with the anacademy app </p>
+           <div>
+              <img src="https://static.uacdn.net/production/_next/static/images/app_store.png" alt="img1"width="150px"
+              height="50px">
+              <img src="https://static.uacdn.net/production/_next/static/images/play_store.png" alt="img2" width="150px"
+              height="50px">
+           </div>
+         </div> 
+           <div class="img4" id="img42">
+               <img src="https://static.uacdn.net/production/_next/static/images/phones.png" alt=""
+               height="100%">
+           </div>
+     </div>
+     <br><br><br><br>
+    <div class="container5">
+        <div class="box5" id="box51">
+            <h2>Start learning with <br>Unacademy </h2>
+            <p>Get unlimited access to structured
+                <br>courses and doubt clearing sessions
+            </p>
+            <br><br><br><br>
+            <a href="#" class="btn">Start learning</a>
+        </div>
+        <div class="box5" id="box52">
+            <div class="sbox5" id="sbox521">
+                <div class="s_sbox51" id="s_sbox5211">
+                    <p>Exam categories</p>
+                    <h3>60</h3><h3 class="green">+</h3>
+                </div>
+                <div class="s_sbox51" id="s_sbox5212">
+                    <p>Daily live class</p>
+                    <h3>1.5k</h3><h3 class="green">+</h3>
+                </div>
+                <div class="s_sbox51" id="s_sbox5213">
+                    <p>Mins. watched</p>
+                    <h3>3.2B</h3><h3 class="green">+</h3>
+                </div>
+            </div>
+            <div class="sbox5" id="sbox522">
+                <div class="s_sbox52" id="s_sbox5221">
+                    <p>Educators</p>
+                    <h3>14k</h3><h3 class="green">+</h3>
+                </div>
+                <div class="s_sbox52" id="s_sbox5222">
+                    <p>Vedio lessons</p>
+                    <h3>1M</h3><h3 class="green">+</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <br><br><br><br>     
+    <br><br><br><br>
+    <div class="last-con">
+        <div class="last-box" id="last-box1"></div>
+        <div class="last-box" id="last-box2">
+            <ul>
+                <li class="list-h">COMPANY</li>
+                <li class="lists">About us</li>
+                <li class="lists">Careers</li>
+                <li class="lists">Blogs</li>
+                <li class="lists">Privacy Policy</li>
+                <li class="lists">Terms and conditions </li>
+            </ul>
+        </div>
+        <div class="last-box" id="last-box3">
+            <li class="list-h">POPULAR GOALS</li>
+            <li class="lists">IIT JEE</li>
+            <li class="lists">UPSE CSE GS</li>
+            <li class="lists">SSC Exams</li>
+            <li class="lists">CBSE Class 12</li>
+            <li class="lists">NEET UG</li>
+        </div>
+        <div class="last-box" id="last-box4">
+            <li class="list-h">OTHER LINKS</li>
+            <li class="lists">User Guidelines</li>
+            <li class="lists">Site Mop</li>
+            <li class="lists">Refund Policy</li>
+            <li class="lists">Legal Notices</li>
+            <li class="lists">Plus subscription T&C</li>
+        </div>
+        <div class="last-box" id="last-box5">
+
+        </div>
+    </div>
+</body>
+</html>
