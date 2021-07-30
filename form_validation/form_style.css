@@ -1,0 +1,27 @@
+body{
+    padding: 10px 50px;
+}
+.formdesign{
+    font-size: 20px;
+}
+.formdesign input{
+    width: 50%;
+    padding: 12px 50px;
+    border: 1px solid blue;
+    margin: 20px;
+}
+.formerror{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn{
+    border-radius: 16px;
+    background-color: salmon;
+    width: 100px;
+    font-size: 25px;
+    height: 40px;
+}
+.btn:hover{
+    background-color: seashell;
+    cursor: pointer;
+}

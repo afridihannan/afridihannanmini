@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<style>
+    * {
+        padding: 0%;
+        margin: 00%;
+    }
+
+    .container {
+        height: 80px;
+        background-color: blueviolet;
+        color: cornsilk;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 15px;
+    }
+
+    .forms {
+        margin: 20px;
+        font-family: monospace;
+        height: 50px;
+        font-size: 35px;
+    }
+
+    .form_design input {
+        padding: 12px 50px;
+        border: 1px solid blue;
+        margin: 20px;
+    }
+
+    .btn {
+        height: 30px;
+        width: 80px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: darkmagenta;
+    }
+
+    span {
+        font-size: 15px;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Contact Form</h1>
+    </div>
+    <form action="file:///D:/javascipt/form_validation/thanks.html" name="my_form" method="post" class="forms" onsubmit="return validateForm()">
+        <div class="form_design" id="name">
+            Name: <input type="text" name="fname" id="" placeholder="Enter your first name"> <input type="text"
+                name="ftitle" id="" placeholder="Enter your last name "><i><span class="form_error"></span></i>
+        </div>
+         <div class="form_design" id="email">
+            Email: <input type="email" name="femail" id="" placeholder="Enter your email"> <i><span
+                    class="form_error"></span></i>
+        </div> 
+        <div class="form_design" id="contact">
+            Contact number: <input type="number" name="fnumber" id="" placeholder="Enter your contact number"><i><span
+                    class="form_error"></span></i>
+        </div>
+        <div class="form_design">
+            occupation : <input type="text" name="foccu" id="" placeholder="Enter your Occupation"><b><span
+                    class="form_error"></span></b>
+        </div>
+        <div class="form_design" id="occu">
+            Name of Organization : <input type="text" name="forg" id="" placeholder="Enter Organisation name"><i><span
+                    class="form_error"></span></i>
+        </div>
+        <div class="form_design" id="birth">
+            Date of Birth : <input type="date" name="fbirth" id="" placeholder=""> <b><span
+                    class="form_error"></span></b>
+        </div>
+        <div class="form_design" id="age">
+            Age : <input type="number" name="fage" id="" placeholder="Enter your age"> <i><span
+                    class="form_error"></span></i>
+        </div>
+        <div class="form_design" id="pass">
+            Enter Your Password : <input type="password" name="fpass" id="" placeholder="Enter your password"><i><span
+                    class="form_error"></span></i>
+        </div>
+        <div class="form_design" id="cpass">
+            Confirm Password : <input type="password" name="fconfirm" id="" placeholder="Confirm Your password"> <i><span
+                    class="form_error"></span></i>
+        </div>
+        <div>
+        <input class="btn" type="submit" value="Submit">
+        </div>
+
+    </form>
+    <script>
+        function clearerror() {
+            let clear=document.getElementsByClassName('form_error');
+            for(let item of clear){
+                item.innerHTML="";
+            }
+        }
+        function seterror(id, error) {
+            let element = document.getElementById(id);
+            element.getElementsByClassName('form_error')[0].innerHTML = error;
+        }
+        function validateForm() {
+            let returnVal = true;
+            clearerror();
+            //name
+            let name = document.forms["my_form"]["fname"].value;
+            let title = document.forms["my_form"]["ftitle"].value;
+            if (name.length < 4) {
+                seterror("name", "*Name is to short");
+                returnVal = false;
+            }
+            if(name.length==0){
+                seterror("name", "*Name cannot be blank");
+            }
+            //email
+            let email=document.forms["my_form"]["femail"].value;
+            if(email.length==0){
+                seterror("email","*Email Cannot be blank");
+                returnVal=false;
+            }
+            let contact=document.forms["my_form"]["fnumber"].value;
+            if(contact.length!=10){
+                seterror("contact","**Please enter 10 numbers");
+                returnVal=false;
+            }
+            let age=document.forms["my_form"]["fage"].value;
+            if(age<=0){
+                seterror("age","*please enter valid age");
+                returnVal=false;
+            }
+            let password=document.forms["my_form"]["fpass"].value;
+            if(password.length<6){
+                seterror("pass","Please enter minimum 6 characters");
+                returnVal=false
+            }
+            else if(password.length==0){
+                seterror("pass","*password cannot be blank");
+            }
+            let cpassword=document.forms["my_form"]["fconfirm"].value;
+            if(cpassword!=password){
+                seterror("cpass","*password must be same");
+            }
+            return returnVal;
+        }
+    </script>
+</body>
+
+</html>

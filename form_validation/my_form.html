@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+    <form action="./action.php"  method="post" name="myForm" onsubmit="return validateForm()" >
+       <div class="formdesign" id="name">
+           Name: <input type="text" name="fname" required id=""><b><span class="formerror"></span></b>
+       </div>
+       <div class="formdesign" id="email">
+        Email: <input type="text" name="femail"  id=""><b><span class="formerror"></span></b>
+    </div>
+    <div class="formdesign" id="phone">
+        Phone Number: <input type="text" name="fphone"  id=""><b><span class="formerror"></span></b>
+    </div>
+    <div class="formdesign" id="Password">
+       Password : <input type="text" name="fPassword"  id=""><b><span class="formerror"></span></b>
+    </div>
+    <div class="formdesign" id="confirm">
+       confirm: <input type="text" name="fconfirm"  id=""><b><span class="formerror"></span></b>
+    </div>
+       <input class="btn" type="submit" value="Submit">
+</div>
+    </form>
+    <script src="my_val.js"></script>
+</body>
+</html>
